@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NotificationFactoryService } from './notifications/notification-factory.service';
 
 @Component({
-  standalone: true,
-  selector: 'app-root',
-  imports: [CommonModule],
-  template: `
+    selector: 'app-root',
+    imports: [CommonModule],
+    template: `
     <h1>Notification Factory (Angular 17+)</h1>
     <button (click)="send('email')">Email</button>
     <button (click)="send('sms')">SMS</button>
