@@ -1,10 +1,10 @@
 import { inject, Injectable } from '@angular/core';
-import { Notification } from './notification.interface';
+import { Notification } from '../interfaces/notification.interface';
 import {
   EMAIL_NOTIFICATION,
   PUSH_NOTIFICATION,
   SMS_NOTIFICATION
-} from './notification-tokens';
+} from '../services/notification-tokens';
 
 @Injectable({ providedIn: 'root' })
 export class NotificationFactoryService {

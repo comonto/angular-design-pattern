@@ -1,8 +1,8 @@
 import { ApplicationConfig } from '@angular/core';
-import { EmailNotificationService } from './notifications/email-notification.service';
-import { SMSNotificationService } from './notifications/sms-notification.service';
-import { PushNotificationService } from './notifications/push-notification.service';
-import { EMAIL_NOTIFICATION, SMS_NOTIFICATION, PUSH_NOTIFICATION } from './notifications/notification-tokens';
+import { EmailNotificationService } from './features/notification/services/email-notification';
+import { SMSNotificationService } from './features/notification/services/sms-notification';
+import { PushNotificationService } from './features/notification/services/push-notification';
+import { EMAIL_NOTIFICATION, SMS_NOTIFICATION, PUSH_NOTIFICATION } from './features/notification/services/notification-tokens';
 
 export const appConfig: ApplicationConfig = {
   providers: [

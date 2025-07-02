@@ -1,22 +1,13 @@
 import { Component } from '@angular/core';
-
-import { NotificationFactoryService } from './notifications/notification-factory.service';
+import { NotificationComponent } from './features/notification/notification.component';
 
 @Component({
-    selector: 'app-root',
-    imports: [],
-    template: `
-    <h1>Notification Factory (Angular 17+)</h1>
-    <button (click)="send('email')">Email</button>
-    <button (click)="send('sms')">SMS</button>
-    <button (click)="send('push')">Push</button>
+  selector: 'app-root',
+  standalone: true,
+  imports: [NotificationComponent],
+  template: `
+    <app-notification></app-notification>
   `
 })
 export class AppComponent {
-  constructor(private factory: NotificationFactoryService) {}
-
-  send(type: 'email' | 'sms' | 'push') {
-    const notification = this.factory.create(type);
-    notification.send(`Messaggio inviato tramite ${type}`);
-  }
 }
